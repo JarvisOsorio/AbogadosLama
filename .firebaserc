@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "abogadoslama-432d8",
+    "production": "abogadoslama-432d8"
+  },
+  "targets": {
+    "abogadoslama-432d8": {
+      "hosting": {
+        "abogados-lama-prod": [
+          "abogadoslama-432d8"
+        ]
+      }
+    }
+  }
+}

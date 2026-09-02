@@ -1,0 +1,9 @@
+# .gitignore for AbogadosLama
+node_modules/
+functions/node_modules/
+functions/lib/
+.firebase/
+.DS_Store
+*.pages
+WhatsApp*
+functions/.env

@@ -1,0 +1,2 @@
+# Procedimiento Estratégico de Juicios de Partición y Sucesiones Complejas
+Cuando los herederos no logran un acuerdo unánime para la venta de una propiedad de origen sucesorio, la legislación chilena faculta la liquidación forzosa mediante la designación de un juez árbitro partidor. Abogados Lama gestiona la Posesión Efectiva inicial y tramita de forma agresiva el Juicio de Partición en Santiago para destrabar el patrimonio familiar y asegurar la correcta adjudicación económica de cada cuota hereditaria.

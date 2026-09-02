@@ -1,0 +1,2 @@
+# Defensa Administrativa ante Sanciones y Multas en Contratación Pública
+Las empresas proveedoras del Estado enfrentan severas contingencias financieras debido a aplicaciones unilaterales de multas por parte de organismos públicos en Mercado Público. Nuestro enfoque corporativo en Contratación Pública abarca la interposición de Recursos de Reposición y Reclamaciones Administrativas para suspender e invalidar sanciones injustas, resguardando la ejecución del contrato y la reputación comercial de la empresa.

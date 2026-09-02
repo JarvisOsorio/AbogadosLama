@@ -1,0 +1,2 @@
+# Análisis Judicial: Restitución de Fondos bajo Ley 21.234 en Santiago de Chile
+Ante giros no reconocidos, fraudes informáticos o clonaciones, la Ley de Fraudes Bancarios obliga a las instituciones financieras a restituir los fondos dentro de plazos determinados. Abogados Lama representa judicialmente a particulares ante negativas de la banca, estructurando demandas ejecutivas de cumplimiento y acciones ante juzgados civiles de la Región Metropolitana para forzar la reversión íntegra de los montos sustraídos.

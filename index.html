@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title id="page-title">Abogados Lama | Protección Legal Integral para tu Empresa y Familia</title>
+    <meta id="page-description" name="description" content="Estudio jurídico líder en Sanhattan, Santiago. Especializados en asesoría preventiva, defensa financiera, bienes raíces, herencias y litigación de alta complejidad.">
+    <link id="page-canonical" rel="canonical" href="https://abogadoslama.cl/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Abogados Lama">
+    <meta property="og:locale" content="es_CL">
+    <meta id="og-title" property="og:title" content="Abogados Lama | Protección Legal Integral">
+    <meta id="og-description" property="og:description" content="Estudio jurídico boutique en Sanhattan, Santiago. Compliance Penal, Bienes Raíces, Herencias y Litigación de alta complejidad.">
+    <meta property="og:url" content="https://abogadoslama.cl/">
+    <meta property="og:image" content="https://abogadoslama.cl/fundadora.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abogados Lama | Protección Legal en Chile">
+    <meta name="twitter:description" content="Estudio jurídico boutique Sanhattan. Compliance, Propiedades, Herencias y Litigios.">
+    <meta name="twitter:image" content="https://abogadoslama.cl/fundadora.jpeg">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+
+      // Custom Agentic Bridge for Conversion Milestones
+      window.logLegalEvent = function(eventName, eventCategory) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, {
+            'event_category': eventCategory,
+            'location_focus': 'Providencia_Santiago'
+          });
+          console.log('GA4 Event Tracked: ' + eventName);
+        }
+      };
+
+      // Trigger homepage view on load if on the root path
+      if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+          window.logLegalEvent('view_homepage', 'landing');
+      }
+    </script>
+    <!-- Firebase SDK (compat v9 — no bundler required) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#121414",
+              "surface": "#1a1c1c",
+              "surface-container": "#1e2020",
+              "surface-container-low": "#161818",
+              "surface-container-lowest": "#0c0f0f",
+              "primary": "#bec6e3",
+              "secondary": "#eabf8d",
+              "on-surface": "#e2e2e2",
+              "on-surface-variant": "#c6c6cd",
+              "outline-variant": "#45464d",
+              "error": "#ffb4ab",
+              "inverse-surface": "#e2e2e2"
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"]
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+        body { 
+            background-color: #121414; 
+            color: #e2e2e2;
+            font-family: 'Inter', sans-serif;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-panel {
+            background: rgba(26, 28, 28, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(234, 191, 141, 0.15);
+        }
+        .glass-modal {
+            background: rgba(18, 20, 20, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(234, 191, 141, 0.25);
+        }
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid #45464d; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+        .faq-answer.open { max-height: 400px; padding-bottom: 1rem; }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .faq-chevron.rotated { transform: rotate(180deg); }
+        /* Campaign banner */
+        #campaign-banner { display: none; }
+        #campaign-banner.visible { display: flex; }
+    </style>
+
+    <!-- JSON-LD Structured Data: LegalService Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LegalService",
+          "@id": "https://abogadoslama.cl/#organization",
+          "name": "Abogados Lama Estudio Jurídico",
+          "url": "https://abogadoslama.cl",
+          "telephone": "+56944814363",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Luis Thayer Ojeda 0191, Oficina 1403",
+            "addressLocality": "Providencia",
+            "addressRegion": "Región Metropolitana",
+            "addressCountry": "CL"
+          },
+          "slogan": "Prevenimos problemas legales para tu negocio y familia y te representamos judicialmente ante un problema que ya tengas",
+          "knowsAbout": [
+            "Derecho Civil",
+            "Sucesiones y Posesiones Efectivas",
+            "Juicios de Partición de Bienes",
+            "Compliance Penal y Ley de Delitos Económicos",
+            "Contratación Pública y Licitaciones Mercado Público",
+            "Ley de Fraudes Bancarios 21.234",
+            "Demandas de Policía Local y Robos en Estacionamientos",
+            "Recuperación de Pie de Inmuebles e Incumplimientos Inmobiliarios"
+          ],
+          "areaServed": [
+            {"@type": "AdministrativeArea", "name": "Santiago"},
+            {"@type": "AdministrativeArea", "name": "Providencia"},
+            {"@type": "AdministrativeArea", "name": "Las Condes"},
+            {"@type": "AdministrativeArea", "name": "Vitacura"},
+            {"@type": "AdministrativeArea", "name": "Lo Barnechea"},
+            {"@type": "AdministrativeArea", "name": "Ñuñoa"},
+            {"@type": "AdministrativeArea", "name": "Maipú"},
+            {"@type": "AdministrativeArea", "name": "Puente Alto"}
+          ]
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es un litigio civil y cuánto tarda?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Un litigio civil resuelve disputas sobre contratos, propiedades o deudas. El tiempo de resolución depende del tribunal, pero puede ir desde unos pocos meses hasta varios años."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo necesito iniciar un juicio de partición?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Cuando existe una comunidad hereditaria y los herederos no logran llegar a un acuerdo sobre cómo dividir o liquidar los bienes raíces o fondos."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué incluye el Compliance Penal bajo la nueva Ley de Delitos Económicos?",
+            "acceptedAnswer": {"@type": "Answer", "text": "La Ley 21.595 (Ley de Delitos Económicos) exige a empresas de cierto tamaño tener un Modelo de Prevención de Delitos actualizado. Abogados Lama diseña, implementa y audita estos modelos para proteger a los directivos de responsabilidad penal personal y resguardar la reputación corporativa."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es un Estudio de Títulos y cuándo necesito uno?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Es una revisión legal exhaustiva del historial jurídico de una propiedad antes de comprarla. Es esencial para detectar hipotecas ocultas, embargos, usufructos o problemas de sucesión. Abogados Lama lo realiza con revisión en el Conservador de Bienes Raíces y certificados actualizados."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo tramito una Posesión Efectiva en Chile?",
+            "acceptedAnswer": {"@type": "Answer", "text": "La posesión efectiva transfiere bienes del fallecido a sus herederos. Si hay testamento, se tramita ante tribunal; sin testamento, ante el Registro Civil. Abogados Lama gestiona ambos tipos, incluyendo partición y adjudicación de bienes, con total acompañamiento durante el proceso."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo defenderme de un juicio de cobranza bancaria o del retail?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Sí. Muchos juicios de cobranza tienen vicios procesales o montos incorrectos. Abogados Lama analiza la deuda, negocia con el banco o retail, y defiende ante el tribunal bloqueando embargos cuando la ley lo permite."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué hacer si recibo una notificación judicial?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Actuar en las primeras 48 horas es crítico — los plazos procesales son breves y fatales. Contacte a Abogados Lama inmediatamente vía WhatsApp o correo para una evaluación de urgencia. La demora puede resultar en la pérdida de derechos procesales irrecuperables."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Dónde está ubicado Abogados Lama y atienden a empresas fuera de Santiago?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Nuestra oficina principal está en Sanhattan (Las Condes / Providencia), Santiago. Atendemos a empresas y personas de todo Chile mediante videoconferencia encriptada para consultas fuera de la Región Metropolitana, y presencialmente para clientes en Santiago, Viña del Mar y Valparaíso."}
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+<body class="antialiased pt-20">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-6 md:px-16 py-4 bg-background/95 backdrop-blur-md border-b border-outline-variant">
+        <div class="serif-title text-2xl font-bold tracking-tight text-on-surface flex items-center gap-2">
+            <span class="text-secondary">LAMA</span>
+            <span class="text-xs uppercase tracking-widest border border-secondary/30 px-2 py-0.5 rounded text-secondary/90">Estudio Jurídico</span>
+        </div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="text-secondary border-b border-secondary pb-0.5 text-xs uppercase tracking-widest font-semibold" href="#inicio">Inicio</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors text-xs uppercase tracking-widest font-semibold" href="#estudio">El Estudio</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors text-xs uppercase tracking-widest font-semibold" href="#especialidades">Especialidades</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors text-xs uppercase tracking-widest font-semibold" href="#trayectoria">Trayectoria</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors text-xs uppercase tracking-widest font-semibold" href="#contacto">Contacto</a>
+        </nav>
+        <button onclick="openCalendarBooking()" class="hidden md:block bg-secondary text-background font-semibold text-xs uppercase tracking-widest px-6 py-3 hover:bg-[#d4ae7d] active:scale-95 transition-all duration-200">
+            Agendar Asesoría
+        </button>
+        <button class="md:hidden text-on-surface" onclick="toggleMobileMenu()">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-background/98 backdrop-blur-lg flex flex-col justify-center items-center gap-8 hidden">
+        <button class="absolute top-6 right-6 text-on-surface" onclick="toggleMobileMenu()">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="serif-title text-3xl text-secondary" href="#inicio" onclick="toggleMobileMenu()">Inicio</a>
+        <a class="serif-title text-3xl text-on-surface" href="#estudio" onclick="toggleMobileMenu()">El Estudio</a>
+        <a class="serif-title text-3xl text-on-surface" href="#especialidades" onclick="toggleMobileMenu()">Especialidades</a>
+        <a class="serif-title text-3xl text-on-surface" href="#trayectoria" onclick="toggleMobileMenu()">Trayectoria</a>
+        <a class="serif-title text-3xl text-on-surface" href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
+        <button onclick="toggleMobileMenu(); openCalendarBooking()" class="bg-secondary text-background font-bold text-sm uppercase tracking-widest px-8 py-4 mt-4">
+            Agendar Asesoría
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center px-6 md:px-16 max-w-7xl mx-auto py-12" id="inicio">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full items-center">
+            <div class="lg:col-span-7 flex flex-col justify-center z-10">
+                <span class="text-secondary uppercase tracking-widest text-xs font-semibold mb-4 flex items-center gap-2">
+                    <span class="w-8 h-px bg-secondary"></span> CONSULTA ULTRA-URGENTE | Sanhattan
+                </span>
+                <h1 class="serif-title text-4xl md:text-5xl lg:text-6xl text-on-surface mb-6 leading-[1.1] font-bold">
+                    ¿A Quién Puedo Demandar? — Solución Integral para tu Empresa y Patrimonio
+                </h1>
+                <p class="text-base md:text-lg text-on-surface-variant mb-8 max-w-2xl leading-relaxed">
+                    Prevenimos problemas legales para tu negocio y familia y te representamos judicialmente ante un problema que ya tengas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="openCalendarBooking()" class="bg-secondary text-background font-bold text-xs uppercase tracking-widest px-8 py-5 hover:bg-[#d4ae7d] active:scale-95 transition-all duration-200 text-center shadow-lg shadow-secondary/10">
+                        Agendar Asesoría Inmediata
+                    </button>
+                    <a href="#especialidades" class="border border-outline-variant hover:border-secondary text-on-surface font-semibold text-xs uppercase tracking-widest px-8 py-5 transition-all text-center">
+                        Ver Áreas de Práctica
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative flex items-center justify-center">
+                <div class="relative w-full max-w-md aspect-[3/4] border border-outline-variant p-3 glass-panel">
+                    <img alt="Socia Fundadora Abogados Lama" class="w-full h-full object-cover grayscale contrast-115 brightness-95 hover:grayscale-0 transition-all duration-700" src="fundadora.jpeg">
+                    <!-- Absolute Decorative Gold Corner -->
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-secondary/60 pointer-events-none"></div>
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-secondary/60 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Triage Legal Section -->
+    <!-- Inline Quiz Section replaced by Triage Modal -->
+
+    <!-- Article View Section (Dynamic Router) -->
+    <section class="hidden min-h-[80vh] bg-surface-container-lowest py-20 px-6 md:px-16" id="article-view">
+        <div class="max-w-4xl mx-auto" id="article-content">
+            <!-- Dynamic Content Injected Here -->
+            <div class="flex justify-center items-center h-64">
+                <div class="w-10 h-10 border-4 border-secondary border-t-transparent rounded-full animate-spin"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Corporate Identity Section -->
+    <section class="py-24 px-6 md:px-16 bg-surface-container-lowest border-y border-outline-variant/60" id="estudio">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-secondary font-semibold uppercase tracking-widest text-xs">Excelencia Jurídica</span>
+                    <h2 class="serif-title text-3xl md:text-4xl text-on-surface mt-2 mb-6 font-bold leading-tight">
+                        Un Estudio Jurídico Moderno y Confiable
+                    </h2>
+                    <div class="w-16 h-1 bg-secondary mb-6"></div>
+                    <p class="text-base text-on-surface-variant leading-relaxed mb-6">
+                        En <strong>Abogados Lama</strong>, unimos la excelencia de la abogacía tradicional con la agilidad y precisión de herramientas tecnológicas avanzadas. Nuestro enfoque corporativo y personal en Sanhattan está diseñado para resolver la complejidad legal de manera clara, transparente y asertiva.
+                    </p>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 glass-panel hover:border-secondary/40 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-4">visibility</span>
+                        <h3 class="serif-title text-xl text-on-surface font-semibold mb-3">Nuestra Misión</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Brindar asesoría jurídica estratégica, clara y eficiente, enfocada en la prevención y resolución de conflictos, la correcta gestión contractual y el estricto cumplimiento normativo, reduciendo riesgos mediante la innovación operativa.
+                        </p>
+                    </div>
+                    <div class="p-8 glass-panel hover:border-secondary/40 transition-colors duration-300">
+                        <span class="material-symbols-outlined text-secondary text-3xl mb-4">military_tech</span>
+                        <h3 class="serif-title text-xl text-on-surface font-semibold mb-3">Nuestra Visión</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Consolidarnos como un estudio jurídico de referencia y alto prestigio, reconocido por entregar soluciones rigurosas, prácticas y orientadas a resguardar la sostenibilidad del patrimonio de personas y empresas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas Grid/Matrix -->
+    <section class="py-24 px-6 md:px-16" id="especialidades">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-secondary font-semibold uppercase tracking-widest text-xs">Nuestras Soluciones</span>
+                <h2 class="serif-title text-3xl md:text-5xl text-on-surface mt-2 mb-4 font-bold">Áreas de Especialización</h2>
+                <p class="text-on-surface-variant text-base md:text-lg">Un mapa completo de servicios para la prevención del riesgo y la defensa ante conflictos.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Column 1: PYMES y Empresas -->
+                <div class="flex flex-col border border-outline-variant bg-surface/30 p-8 hover:border-secondary/30 transition-all duration-300 relative group">
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-3xl text-secondary">domain</span>
+                        <h3 class="serif-title text-2xl font-bold text-on-surface">PYMES y Empresas</h3>
+                    </div>
+                    <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Asesoría jurídica estratégica enfocada en la continuidad del negocio, mitigación de riesgos contractuales y cumplimiento del marco legal corporativo.</p>
+                    
+                    <ul class="space-y-4 mt-auto">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Asuntos Laborales:</strong>
+                                <span class="text-xs text-on-surface-variant">Ley Karin y 42 Horas. Actualización de contratos y reglamentos internos.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Compliance Penal:</strong>
+                                <span class="text-xs text-on-surface-variant">Prevención de Delitos Económicos y modelos de compliance corporativo.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Contratación Pública:</strong>
+                                <span class="text-xs text-on-surface-variant">Licitaciones públicas y reclamación judicial de multas administrativas del Estado.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Gestión Contractual:</strong>
+                                <span class="text-xs text-on-surface-variant">Redacción, negociación y control documental de contratos y finiquitos.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Personas y Familia -->
+                <div class="flex flex-col border border-outline-variant bg-surface/30 p-8 hover:border-secondary/30 transition-all duration-300 relative group">
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-3xl text-secondary">family_restroom</span>
+                        <h3 class="serif-title text-2xl font-bold text-on-surface">Personas y Familia</h3>
+                    </div>
+                    <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Protección del patrimonio personal, gestión de transacciones inmobiliarias y defensa judicial integral en el ámbito civil, contractual y sucesorio.</p>
+                    
+                    <ul class="space-y-4 mt-auto">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Sucesiones:</strong>
+                                <span class="text-xs text-on-surface-variant">Posesiones Efectivas expeditas y Juicios de Partición de bienes familiares.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Conflictos Complejos:</strong>
+                                <span class="text-xs text-on-surface-variant">Recuperación de pie de inmuebles, fraudes bancarios, cobranzas, robos en estacionamientos comerciales.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Policía Local:</strong>
+                                <span class="text-xs text-on-surface-variant">Resolución de controversias y litigios ante el Juzgado de Policía Local.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Escrituras Civiles:</strong>
+                                <span class="text-xs text-on-surface-variant">Asesoría experta en compraventas, usufructos y transacciones inmobiliarias.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Litigios y Defensa -->
+                <div class="flex flex-col border border-outline-variant bg-surface/30 p-8 hover:border-secondary/30 transition-all duration-300 relative group">
+                    <div class="absolute top-0 left-0 w-full h-[3px] bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-3xl text-secondary">gavel</span>
+                        <h3 class="serif-title text-2xl font-bold text-on-surface">LITIGIOS</h3>
+                    </div>
+                    <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Representación judicial implacable en controversias comerciales, contractuales y corporativas de alta complejidad en todas las instancias.</p>
+                    
+                    <ul class="space-y-4 mt-auto">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Civiles</strong>
+                                <span class="text-xs text-on-surface-variant">Experiencia en litigación en juicios ordinarios y ejecutivos ante Juzgado de Letras y Corte de Apelaciones.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Penales</strong>
+                                <span class="text-xs text-on-surface-variant">Experiencia litigando ante Juzgado de Garantía, Tribunal de Juicio Oral en lo Penal, Corte de Apelaciones y Corte Suprema.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+                            <div>
+                                <strong class="text-on-surface text-sm block">Administrativos</strong>
+                                <span class="text-xs text-on-surface-variant">Tramitación ante organismos de la administración del Estado.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Bio / Trayectoria -->
+    <section class="py-24 px-6 md:px-16 bg-surface-container-lowest" id="trayectoria">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
+                    <span class="text-secondary font-semibold uppercase tracking-widest text-xs">Trayectoria Académica y Profesional</span>
+                    <h2 class="serif-title text-3xl md:text-4xl text-on-surface mt-2 mb-6 font-bold leading-tight">
+                        Respaldo y Rigor Técnico
+                    </h2>
+                    <p class="text-base text-on-surface-variant mb-6 leading-relaxed">
+                        Graduada con honores de la prestigiosa **Pontificia Universidad Católica de Valparaíso**, cimentando una trayectoria sólida enfocada en la ética, la pulcritud documental y el análisis técnico exhaustivo.
+                    </p>
+                    <p class="text-base text-on-surface-variant mb-8 leading-relaxed">
+                        Nuestra práctica profesional se caracteriza por una preparación metodológica impecable de la prueba y la defensa proactiva del interés patrimonial de nuestros patrocinados, estableciendo precedentes favorables en la jurisprudencia del país.
+                    </p>
+                    <div class="border-t border-outline-variant pt-6 grid grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="serif-title text-3xl text-secondary font-bold">20+</h4>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Años de Ejercicio</p>
+                        </div>
+                        <div>
+                            <h4 class="serif-title text-3xl text-secondary font-bold">95%</h4>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Resoluciones Exitosas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-1"></div>
+                <div class="lg:col-span-5 relative flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
+                    <div class="relative w-full max-w-sm aspect-[4/5] border border-outline-variant p-3 glass-panel">
+                        <div class="w-full h-full bg-[#1e2020] flex flex-col items-center justify-center text-center p-6 border border-secondary/15">
+                            <span class="material-symbols-outlined text-secondary text-5xl mb-4">balance</span>
+                            <h3 class="serif-title text-xl text-on-surface font-semibold mb-2">Absolute Trust</h3>
+                            <p class="text-xs text-on-surface-variant max-w-xs leading-relaxed">
+                                Filosofía institucional fundamentada en la transparencia absoluta, reportes periódicos automatizados de causas y el resguardo de la confidencialidad estratégica de cada cliente.
+                            </p>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-secondary/40 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Integration Section -->
+    <section class="py-24 px-6 md:px-16 border-t border-outline-variant/60 bg-surface/35" id="contacto">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5">
+                    <span class="text-secondary font-semibold uppercase tracking-widest text-xs">Atención Confidencial</span>
+                    <h2 class="serif-title text-3xl md:text-4xl text-on-surface mt-2 mb-6 font-bold">Inicie su Consulta Hoy</h2>
+                    <p class="text-base text-on-surface-variant leading-relaxed mb-8">
+                        Para su seguridad y comodidad, disponemos de sesiones presenciales en nuestras oficinas de Sanhattan o mediante videoconferencia encriptada. Active el asistente inteligente para evaluar la urgencia legal de su requerimiento.
+                    </p>
+                    <!-- NAP Block — must match Google Business Profile exactly -->
+                    <address class="not-italic space-y-4" itemscope itemtype="https://schema.org/LegalService">
+                        <meta itemprop="name" content="Abogados Lama">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary mt-0.5">location_on</span>
+                            <div>
+                                <p class="text-sm text-on-surface font-medium" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                    <span itemprop="streetAddress">Av. Luis Thayer Ojeda 0191, Oficina 1403</span>,
+                                    <span itemprop="addressLocality">Providencia</span>,
+                                    <span itemprop="addressRegion">Región Metropolitana</span>,
+                                    <span itemprop="addressCountry">Chile</span>
+                                </p>
+                                <a href="https://share.google/hwalgur76Upzctwfx" target="_blank" rel="noopener" class="text-xs text-secondary hover:underline mt-1 inline-block">Ver en Google Maps →</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">mail</span>
+                            <a href="mailto:rtlama@icloud.com" class="text-sm text-on-surface-variant hover:text-secondary transition-colors" itemprop="email">rtlama@icloud.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">phone</span>
+                            <a href="tel:+56944814363" class="text-sm text-on-surface-variant hover:text-secondary transition-colors" itemprop="telephone">+56 9 4481 4363</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">schedule</span>
+                            <span class="text-sm text-on-surface-variant" itemprop="openingHours" datetime="Mo-Fr 09:00-19:00">Lunes a Viernes, 9:00 – 19:00 hrs</span>
+                        </div>
+                        <!-- Review CTA -->
+                        <div class="pt-2">
+                            <a href="/recomendar" target="_blank" rel="noopener"
+                               class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-background bg-secondary px-4 py-2.5 hover:bg-[#d4ae7d] transition-colors">
+                                <span class="material-symbols-outlined text-base">star</span>
+                                Déjanos una Reseña en Google
+                            </a>
+                        </div>
+                    </address>
+                </div>
+                <div class="lg:col-span-1"></div>
+                <div class="lg:col-span-6 flex flex-col justify-center">
+                    <div class="border border-outline-variant p-8 bg-surface-container-lowest glass-panel flex flex-col items-center justify-center text-center py-12">
+                        <span class="material-symbols-outlined text-secondary text-5xl mb-4">quickreply</span>
+                        <h3 class="serif-title text-xl text-on-surface font-semibold mb-3">Triage Legal Automatizado</h3>
+                        <p class="text-xs text-on-surface-variant max-w-sm mb-8 leading-relaxed">
+                            Evaluamos la urgencia, materia y viabilidad técnica de su caso legal en menos de 2 minutos para derivarlo al especialista indicado de forma inmediata.
+                        </p>
+                        <button onclick="openTriageModal()" class="bg-secondary text-background font-bold text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#d4ae7d] active:scale-95 transition-all w-full md:w-auto text-center">
+                            Iniciar Asistente de Triage
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ FAQ ACCORDION SECTION ══════════════════════════════════════════ -->
+    <section class="py-24 px-6 md:px-16 bg-surface-container-lowest border-t border-outline-variant/60" id="faq" aria-label="Preguntas Frecuentes">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-secondary font-semibold uppercase tracking-widest text-xs">Consultas Habituales</span>
+                <h2 class="serif-title text-3xl md:text-4xl text-on-surface mt-2 font-bold">Preguntas Frecuentes</h2>
+                <p class="text-on-surface-variant text-base mt-3">Respuestas claras a las dudas más comunes de nuestros clientes.</p>
+            </div>
+            <div class="space-y-0" id="faq-list">
+
+                <!-- FAQ Item -->
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Qué es un litigio civil y cuánto tarda en resolverse?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Un litigio civil busca resolver disputas económicas, contratos incumplidos o problemas de propiedad. El tiempo varía según el tribunal y la complejidad del caso, y puede resolverse mediante acuerdos extrajudiciales rápidos o llegar a un juicio formal.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Cuándo debo iniciar un juicio de partición de herencia?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Se debe iniciar un juicio de partición cuando los herederos que comparten una propiedad o patrimonio no logran ponerse de acuerdo para venderla o dividirla de forma voluntaria, lo que requiere la intervención de un juez partidor.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Qué incluye el Compliance Penal bajo la Ley de Delitos Económicos (Ley 21.595)?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Incluye el diseño, implementación y auditoría de un Modelo de Prevención de Delitos (MPD) que protege a los <strong class="text-on-surface">directivos de responsabilidad penal personal</strong>. Abogados Lama lo adapta al giro, tamaño y riesgo específico de cada empresa, con revisión periódica de cumplimiento.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Qué es un Estudio de Títulos y por qué lo necesito antes de comprar una propiedad?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Es una revisión legal exhaustiva del historial jurídico de la propiedad: hipotecas, embargos, usufructos, servidumbres y problemas de sucesión. Sin este estudio, podría comprar una propiedad con <strong class="text-on-surface">deudas o gravámenes ocultos</strong>. Abogados Lama lo realiza con certificados actualizados del Conservador de Bienes Raíces.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Cómo tramito una Posesión Efectiva en Chile?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Si hay testamento, se tramita ante el Juzgado Civil competente. Sin testamento, ante el Registro Civil. Abogados Lama gestiona <strong class="text-on-surface">ambos tipos de posesión efectiva</strong>, incluyendo la partición y adjudicación de bienes entre herederos, con acompañamiento completo durante todo el proceso.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Puedo defenderme de un juicio de cobranza bancaria o del retail?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Sí. Muchos juicios de cobranza tienen <strong class="text-on-surface">vicios procesales o montos incorrectos</strong>. Abogados Lama analiza la deuda, negocia con el banco o retailer, y defiende judicialmente bloqueando embargos cuando la ley lo permite. No espere: actuar rápido es clave.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Qué debo hacer si recibo una notificación judicial?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        <strong class="text-secondary">Actúe en las primeras 48 horas</strong> — los plazos procesales son breves y su incumplimiento es fatal e irreversible. Contacte a Abogados Lama inmediatamente por WhatsApp o correo para una evaluación de urgencia. La demora puede significar la pérdida definitiva de derechos.
+                    </div>
+                </div>
+
+                <div class="faq-item py-5">
+                    <button class="w-full flex items-start justify-between text-left gap-4 group" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span class="text-sm md:text-base font-semibold text-on-surface leading-snug">¿Atienden a clientes fuera de Santiago?</span>
+                        <span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5 faq-chevron">expand_more</span>
+                    </button>
+                    <div class="faq-answer text-sm text-on-surface-variant leading-relaxed mt-3 pr-10">
+                        Sí. Atendemos presencialmente en Sanhattan (Las Condes / Providencia) y mediante <strong class="text-on-surface">videoconferencia encriptada</strong> para clientes en todo Chile. Tenemos experiencia en asuntos de Corte Suprema a nivel nacional y clientes en Viña del Mar, Valparaíso, Concepción y otras regiones.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with full NAP — mirrors Google Business Profile exactly -->
+    <footer class="w-full pt-16 pb-8 px-6 md:px-16 bg-surface-container-lowest border-t border-outline-variant" itemscope itemtype="https://schema.org/LegalService">
+        <meta itemprop="name" content="Abogados Lama">
+        <meta itemprop="url" content="https://abogadoslama.cl">
+        <meta itemprop="telephone" content="+56944814363">
+        <meta itemprop="email" content="rtlama@icloud.com">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer top grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-outline-variant/60">
+                <!-- Brand -->
+                <div>
+                    <div class="serif-title text-2xl font-bold text-secondary mb-3">ABOGADOS LAMA</div>
+                    <p class="text-xs text-on-surface-variant leading-relaxed mb-4">Excelencia Jurídica y Compromiso Ético.<br>Estudio boutique en Sanhattan, Santiago de Chile.</p>
+                    <a href="/recomendar" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-1.5 text-xs font-semibold text-secondary hover:text-[#d4ae7d] transition-colors">
+                        <span class="material-symbols-outlined text-sm">star</span>
+                        Calificarnos en Google
+                    </a>
+                </div>
+                <!-- NAP — identical to GBP listing -->
+                <div>
+                    <p class="text-xs font-semibold text-on-surface uppercase tracking-widest mb-4">Contacto</p>
+                    <address class="not-italic space-y-2.5" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <p class="text-xs text-on-surface-variant">
+                            <span itemprop="streetAddress">Av. Luis Thayer Ojeda 0191, Oficina 1403</span>,
+                            <span itemprop="addressLocality">Providencia</span>,
+                            <span itemprop="addressRegion">Región Metropolitana</span>,
+                            <span itemprop="addressCountry">Chile</span>
+                        </p>
+                        <p><a href="tel:+56944814363" class="text-xs text-on-surface-variant hover:text-secondary transition-colors" itemprop="telephone">+56 9 4481 4363</a></p>
+                        <p><a href="mailto:rtlama@icloud.com" class="text-xs text-on-surface-variant hover:text-secondary transition-colors" itemprop="email">rtlama@icloud.com</a></p>
+                        <p class="text-xs text-on-surface-variant" itemprop="openingHours" datetime="Mo-Fr 09:00-19:00">Lun – Vie · 09:00 – 19:00</p>
+                        <p><a href="https://share.google/hwalgur76Upzctwfx" target="_blank" rel="noopener" class="text-xs text-secondary hover:underline">Ver en Google Maps →</a></p>
+                    </address>
+                </div>
+                <!-- Quick links -->
+                <div>
+                    <p class="text-xs font-semibold text-on-surface uppercase tracking-widest mb-4">Servicios</p>
+                    <nav class="space-y-2">
+                        <a href="/servicios/compliance-penal/providencia" class="block text-xs text-on-surface-variant hover:text-secondary transition-colors">Compliance Penal — Providencia</a>
+                        <a href="/servicios/propiedades/vitacura" class="block text-xs text-on-surface-variant hover:text-secondary transition-colors">Bienes Raíces — Vitacura</a>
+                        <a href="/servicios/litigios/santiago-centro" class="block text-xs text-on-surface-variant hover:text-secondary transition-colors">Litigios — Santiago Centro</a>
+                        <a href="/servicios/posesion-efectiva/las-condes" class="block text-xs text-on-surface-variant hover:text-secondary transition-colors">Posesión Efectiva</a>
+                    </nav>
+                </div>
+            </div>
+            <!-- Footer bottom -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
+                <p class="text-xs text-on-surface-variant">© 2026 Abogados Lama · Las Condes, Santiago, Chile · Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a class="text-xs text-on-surface-variant hover:text-secondary transition-colors" href="#">Términos</a>
+                    <a class="text-xs text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacidad</a>
+                    <a class="text-xs text-on-surface-variant hover:text-secondary transition-colors" href="/recomendar" target="_blank">⭐ Reseñas Google</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inbound Lead Triage Modal (State Machine) -->
+    <div id="triage-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md hidden transition-opacity duration-300 opacity-0 px-4">
+        
+        <div class="w-full max-w-xl glass-modal p-8 relative shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+            <!-- Close button -->
+            <button onclick="closeTriageModal()" class="absolute top-6 right-6 text-on-surface-variant hover:text-on-surface transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+
+            <!-- Progress Bar / Stepper -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-2">
+                    <span id="step-label" class="text-xs font-semibold text-secondary uppercase tracking-widest">Paso 1 de 4: Segmentación</span>
+                    <span id="step-percentage" class="text-xs font-semibold text-on-surface-variant">25%</span>
+                </div>
+                <div class="w-full h-1.5 bg-[#282a2b] rounded-full overflow-hidden">
+                    <div id="progress-indicator" class="h-full bg-secondary transition-all duration-300 w-1/4"></div>
+                </div>
+            </div>
+
+            <!-- Lead Capture Form State Machine -->
+            <form id="triage-form" onsubmit="handleFormSubmit(event)">
+                
+                <!-- STEP 1: Tipo de Requerimiento -->
+                <div id="step-1" class="triage-step block">
+                    <h3 class="serif-title text-xl md:text-2xl text-on-surface font-bold mb-4">¿En qué área requiere representación judicial?</h3>
+                    <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Seleccione la especialidad para derivarlo al litigante adecuado.</p>
+                    
+                    <div class="space-y-4">
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="requerimiento" value="Litigios Civiles" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant" required onchange="updateStep2Options()">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Litigios Civiles</strong>
+                                <span class="text-xs text-on-surface-variant">Juicios ordinarios, ejecutivos, demandas civiles y bienes raíces.</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="requerimiento" value="Litigios Penales" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant" onchange="updateStep2Options()">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Litigios Penales</strong>
+                                <span class="text-xs text-on-surface-variant">Defensa en Juzgado de Garantía, Tribunal Oral en lo Penal, y querellas.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Sub-Nodes (Dynamic) -->
+                <div id="step-2" class="triage-step hidden">
+                    <h3 class="serif-title text-xl md:text-2xl text-on-surface font-bold mb-4">¿Cuál es el detalle de su requerimiento?</h3>
+                    <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Esto nos permite catalogar la prioridad interna de su requerimiento jurídico.</p>
+                    
+                    <div id="step-2-civiles" class="space-y-4 hidden">
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Tengo una demanda civil en curso o una orden de embargo inminente" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Tengo una demanda civil en curso o una orden de embargo inminente</strong>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Necesito recuperar el pie de un departamento retenido por una inmobiliaria" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Necesito recuperar el pie de un departamento retenido por una inmobiliaria</strong>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Enfrento un juicio ejecutivo de cobranza o disputa de herencias/bienes" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Enfrento un juicio ejecutivo de cobranza o disputa de herencias/bienes</strong>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Quiero demandar ante el Juzgado de Policía Local (Fraudes Bancarios Ley 21.234 o Robos en Estacionamientos)" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Quiero demandar ante el Juzgado de Policía Local (Fraudes Bancarios o Robos)</strong>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div id="step-2-penales" class="space-y-4 hidden">
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Fui notificado por un Juzgado de Garantía o requiero defensa de urgencia" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Fui notificado por un Juzgado de Garantía o requiero defensa de urgencia</strong>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Soy víctima de un delito económico/estafa y busco querellarme" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Soy víctima de un delito económico/estafa y busco querellarme</strong>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-4 p-4 border border-outline-variant bg-surface/30 hover:border-secondary cursor-pointer transition-all duration-200">
+                            <input type="radio" name="subnodo" value="Tengo una causa penal activa en etapa de Juicio Oral (TOP) o apelación en Corte Suprema" class="text-secondary focus:ring-secondary focus:ring-offset-background bg-[#121414] border-outline-variant">
+                            <div>
+                                <strong class="text-sm text-on-surface block">Tengo una causa penal activa en etapa de Juicio Oral (TOP) o apelación en Corte Suprema</strong>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Contact Hook & WhatsApp -->
+                <div id="step-3" class="triage-step hidden">
+                    <h3 class="serif-title text-xl md:text-2xl text-on-surface font-bold mb-4">Información de Contacto Directo</h3>
+                    <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Un abogado sénior validará los antecedentes y lo contactará en forma prioritaria.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-2">Nombre Completo</label>
+                            <input type="text" id="contacto-nombre" name="nombre" class="w-full bg-[#121414] border border-outline-variant focus:border-secondary focus:ring-secondary/20 text-on-surface text-sm px-4 py-3" placeholder="Ej. Jarvis Nelson Osorio" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-2">WhatsApp / Teléfono Móvil (Ej: +56 9 1234 5678)</label>
+                            <div class="flex gap-2">
+                                <span class="bg-[#1e2020] border border-outline-variant text-on-surface-variant px-4 py-3 text-sm flex items-center justify-center font-mono">+56</span>
+                                <input type="tel" id="contacto-fono" name="telefono" class="flex-grow bg-[#121414] border border-outline-variant focus:border-secondary focus:ring-secondary/20 text-on-surface text-sm px-4 py-3 font-mono" placeholder="9 1234 5678" required>
+                            </div>
+                            <p id="phone-error" class="text-xs text-red-400 mt-2 hidden">Por favor ingrese un número chileno de 9 dígitos válido (ej: 9 1234 5678).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Success Screen / Catchment Block -->
+                <div id="step-success" class="triage-step hidden text-center py-8">
+                    <span class="material-symbols-outlined text-secondary text-6xl mb-4 animate-bounce">gavel</span>
+                    <h3 class="serif-title text-2xl md:text-3xl text-on-surface font-bold mb-4">Evaluación Iniciada</h3>
+                    <p class="text-sm text-on-surface-variant mb-6 max-w-sm mx-auto leading-relaxed text-left border-l-4 border-secondary pl-4 py-2">
+                        Procesando peritaje procesal urgente... Hemos clasificado su caso dentro de nuestra mesa de litigación prioritaria de Providencia bajo nuestra política de Respuestas Rápidas y Disponibilidad Absoluta. Para hablar directo con la abogada Rossy Lama, haga clic abajo.
+                    </p>
+                    <div class="bg-surface/50 border border-outline-variant p-4 rounded mb-6 font-mono text-xs max-w-sm mx-auto text-on-surface-variant">
+                        Código de Seguimiento: <span id="success-code" class="text-secondary font-semibold">AL-9428-2026</span>
+                    </div>
+                    <button type="button" onclick="submitTriageWhatsApp()" class="mt-4 bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest px-8 py-4 hover:scale-105 transition-all inline-flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        Hablar con Rossy Lama
+                    </button>
+                    <button type="button" onclick="closeTriageModal()" class="block mx-auto mt-6 text-xs uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors font-semibold py-3 px-4">
+                        Cerrar Ventana
+                    </button>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div id="navigation-controls" class="flex justify-between items-center mt-8 pt-6 border-t border-outline-variant/60">
+                    <button type="button" id="prev-btn" onclick="prevStep()" class="text-xs uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors font-semibold py-3 px-4 disabled:opacity-40" disabled>
+                        Atrás
+                    </button>
+                    <button type="button" id="next-btn" onclick="nextStep()" class="bg-secondary text-background font-bold text-xs uppercase tracking-widest px-6 py-3 hover:bg-[#d4ae7d] active:scale-95 transition-all">
+                        Siguiente
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // ── Firebase Configuration ──────────────────────────────────────────
+        // Project: AbogadosLama (abogadoslama-432d8)
+        const firebaseConfig = {
+          apiKey: "AIzaSyBPti7xMXIhhOFRo0fVvfZ_gt5qeUP3jfU",
+          authDomain: "abogadoslama-432d8.firebaseapp.com",
+          projectId: "abogadoslama-432d8",
+          storageBucket: "abogadoslama-432d8.firebasestorage.app",
+          messagingSenderId: "539335624034",
+          appId: "1:539335624034:web:ede03dc1f00b59a5e4583b",
+          measurementId: "G-51ZFXYCFDG"
+        };
+
+        let db = null;
+        try {
+          firebase.initializeApp(firebaseConfig);
+          db = firebase.firestore();
+          // Only init analytics if measurementId is configured
+          if (firebaseConfig.measurementId && firebaseConfig.measurementId !== 'YOUR_MEASUREMENT_ID') {
+            firebase.analytics();
+          }
+          console.log('[Lama] Firebase inicializado correctamente.');
+        } catch (e) {
+          console.warn('[Lama] Firebase no inicializado (config pendiente). Modo offline activo.', e.message);
+        }
+    </script>
+
+    <!-- ══ SEO COMMUNE ROUTER + UTM CAMPAIGN ENGINE ══════════════════════ -->
+    <script>
+    (function() {
+        // ── /recomendar + /review → instant Google Business review redirect ─
+        const _path = window.location.pathname.replace(/\/+$/, '');
+        if (_path === '/recomendar' || _path === '/review' || _path === '/resena' || _path === '/opiniones') {
+            window.location.replace('https://share.google/hwalgur76Upzctwfx');
+            return; // halt all further JS execution on this path
+        }
+
+        // ── Commune slug → display name map ────────────────────────────────
+        const COMUNAS = {
+            'las-condes': 'Las Condes', 'providencia': 'Providencia',
+            'vitacura': 'Vitacura', 'nunoa': 'Ñuñoa',
+            'santiago-centro': 'Santiago Centro', 'huechuraba': 'Huechuraba',
+            'lo-barnechea': 'Lo Barnechea', 'maipu': 'Maipú',
+            'san-miguel': 'San Miguel', 'vina-del-mar': 'Viña del Mar',
+            'valparaiso': 'Valparaíso', 'concepcion': 'Concepción'
+        };
+
+        // ── Service slug → display name + hero copy map ────────────────────
+        const SERVICIOS = {
+            'compliance-penal': { label: 'Compliance Penal Empresarial',         hero: 'Compliance Penal y Prevención de Delitos' },
+            'propiedades':      { label: 'Bienes Raíces y Propiedades',          hero: 'Asesoría Jurídica en Bienes Raíces' },
+            'litigios':         { label: 'Litigación Civil y Comercial',         hero: 'Defensa Legal en Litigios de Alta Complejidad' },
+            'posesion-efectiva':{ label: 'Derecho Sucesorio y Herencias',        hero: 'Tramitación de Posesiones Efectivas y Herencias' }
+        };
+
+        // ── UTM campaign intent matrix ──────────────────────────────────────
+        const UTM_INTENTS = {
+            'linkedin':  { headline: 'Litigios Comerciales y Contractuales para Directivos', badge: 'B2B · Civil' },
+            'instagram': { headline: 'Proteja su Patrimonio Familiar con Expertos en Sanhattan', badge: 'B2C · Patrimonio' },
+            'facebook':  { headline: 'Soluciones Legales para su Empresa y su Familia en Chile', badge: 'B2C · Integral' },
+            'google':    { headline: 'Representación Legal Experta en Santiago de Chile', badge: 'Búsqueda' }
+        };
+        const CAMPAIGN_INTENTS = {
+            'herencias':        { headline: 'Tramitamos su Posesión Efectiva y Protegemos su Herencia', badge: '📋 Herencias' },
+            'compliance':       { headline: 'Proteja a su Directorio con un Modelo de Prevención de Delitos', badge: '📋 Compliance Penal' },
+            'urgencia-civil':   { headline: 'Notificación Civil Recibida: Actúe en las Próximas 48 Horas', badge: '⚡ Urgencia Judicial' },
+            'propiedades':      { headline: 'Compre o Venda Propiedades con Respaldo Jurídico Total', badge: '🏠 Bienes Raíces' }
+        };
+        const PATH_INTENTS = {
+            '/urgencia-civil': { headline: 'Notificación Civil Recibida — Actúe Ahora', badge: '⚡ Urgencia' },
+            '/compliance':     { headline: 'Compliance Penal: Blindaje Completo para su Empresa', badge: '📋 Corporate' }
+        };
+
+        // ── Parse current URL ───────────────────────────────────────────────
+        const path = window.location.pathname;
+        const params = new URLSearchParams(window.location.search);
+        const utmSource   = (params.get('utm_source')   || '').toLowerCase();
+        const utmCampaign = (params.get('utm_campaign') || params.get('campaign') || '').toLowerCase();
+        const utmContent  = (params.get('utm_content')  || '').toLowerCase();
+
+        // ── Commune / Service SPA Router ────────────────────────────────────
+        // Pattern: /servicios/:service-:comuna or /servicios/:service/:comuna
+        const serviceKeys = Object.keys(SERVICIOS).join('|');
+        const routeMatch = path.match(new RegExp(`^\\/servicios\\/(${serviceKeys})(?:[-/]([\\w-]+))?$`));
+        if (routeMatch) {
+            const serviceSlug = routeMatch[1];
+            const comunaSlug  = routeMatch[2] || '';
+            const servicio    = SERVICIOS[serviceSlug] || { label: serviceSlug, hero: 'Asesoría Legal Especializada' };
+            const comunaNombre = COMUNAS[comunaSlug] || comunaSlug.replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Update H1
+                const h1 = document.querySelector('#inicio h1');
+                if (h1) {
+                    h1.textContent = comunaNombre
+                        ? `¿Problemas con Herencias, Contratos o Bienes Raíces en ${comunaNombre}?`
+                        : `${servicio.hero} en Chile`;
+                }
+                
+                // Update Urgency Bullet Hooks
+                const p = document.querySelector('#inicio p');
+                if (p && comunaNombre) {
+                    p.textContent = `No arriesgues tu patrimonio en ${comunaNombre}. Ejecuta nuestro blindaje legal de emergencia hoy.`;
+                }
+                // Update location badge
+                const badge = document.querySelector('#inicio span.text-secondary');
+                if (badge && comunaNombre) badge.innerHTML = `<span class="w-8 h-px bg-secondary inline-block"></span> ${comunaNombre} | Sanhattan`;
+                // Update SEO meta
+                const titleEl = document.getElementById('page-title');
+                const descEl  = document.getElementById('page-description');
+                const canonEl = document.getElementById('page-canonical');
+                if (titleEl) titleEl.textContent = `${servicio.label} en ${comunaNombre || 'Chile'} | Abogados Lama`;
+                if (descEl)  descEl.setAttribute('content', `Abogados Lama: ${servicio.label} para empresas y personas en ${comunaNombre || 'Chile'}. Contáctenos en Sanhattan, Santiago.`);
+                if (canonEl) canonEl.setAttribute('href', `https://abogadoslama.cl${path}`);
+            });
+        }
+
+        // ── Article SPA Router ──────────────────────────────────────────────
+        const articleMatch = path.match(/^\/articulos\/([\w-]+)/);
+        if (articleMatch) {
+            const articleSlug = articleMatch[1];
+            
+            document.addEventListener('DOMContentLoaded', async function() {
+                // Hide landing page sections
+                document.getElementById('inicio')?.classList.add('hidden');
+                document.getElementById('estudio')?.classList.add('hidden');
+                document.getElementById('especialidades')?.classList.add('hidden');
+                document.getElementById('equipo')?.classList.add('hidden');
+                
+                // Show article view
+                const articleView = document.getElementById('article-view');
+                const articleContent = document.getElementById('article-content');
+                if (articleView) articleView.classList.remove('hidden');
+                
+                try {
+                    const response = await fetch(`/assets/seo_clusters/${articleSlug}.md`);
+                    if (!response.ok) throw new Error('Article not found');
+                    const markdown = await response.text();
+                    
+                    // Lightweight markdown parser
+                    let html = markdown
+                        .split('\n\n')
+                        .map(block => {
+                            if (block.trim() === '') return '';
+                            if (block.startsWith('# ')) return `<h1 class="serif-title text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-on-surface leading-tight">${block.replace(/^# /, '')}</h1>`;
+                            if (block.startsWith('## ')) return `<h2 class="serif-title text-xl md:text-2xl font-bold mt-10 mb-4 text-on-surface">${block.replace(/^## /, '')}</h2>`;
+                            if (block.startsWith('### ')) return `<h3 class="serif-title text-lg font-bold mt-8 mb-3 text-on-surface">${block.replace(/^### /, '')}</h3>`;
+                            // Parse bold
+                            const inlineParsed = block.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                            return `<p class="mb-6 text-on-surface-variant leading-relaxed text-base md:text-lg">${inlineParsed}</p>`;
+                        })
+                        .join('\n');
+
+                    // Append CTA
+                    const ctaHtml = `
+                        <div class="mt-16 p-8 bg-surface border-t-4 border-secondary/80 rounded-b-lg text-center shadow-lg">
+                            <p class="text-on-surface font-semibold text-lg md:text-xl mb-4">¿Tu empresa enfrenta una fiscalización o urgencia legal?</p>
+                            <p class="text-on-surface-variant mb-6 text-base md:text-lg">Habla directamente con Rossy Lama al <a href="tel:+56944814363" class="text-secondary font-bold hover:underline">+56944814363</a> o inicia una consulta inmediata vía WhatsApp.</p>
+                            <a href="https://wa.me/56944814363" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold text-xs md:text-sm uppercase tracking-widest px-8 py-4 hover:scale-105 transition-transform rounded-full shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                                Iniciar Consulta en WhatsApp
+                            </a>
+                        </div>
+                    `;
+                    
+                    articleContent.innerHTML = html + ctaHtml;
+                    
+                    // Update SEO meta
+                    const titleMatch = markdown.match(/^# (.*$)/m);
+                    if (titleMatch) {
+                        const titleEl = document.getElementById('page-title');
+                        if (titleEl) titleEl.textContent = `${titleMatch[1]} | Abogados Lama`;
+                    }
+                    
+                } catch (err) {
+                    articleContent.innerHTML = `
+                        <div class="text-center py-20">
+                            <h1 class="serif-title text-3xl font-bold mb-4 text-on-surface">Artículo no encontrado</h1>
+                            <p class="text-on-surface-variant mb-8">El contenido que buscas no está disponible o ha sido movido.</p>
+                            <a href="/" class="bg-secondary text-background font-bold text-xs uppercase tracking-widest px-8 py-4 hover:bg-[#d4ae7d] transition-colors">Volver al Inicio</a>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        // ── UTM / Campaign Intent Engine ────────────────────────────────────
+        let campaignIntent = null;
+
+        // Check campaign param first, then UTM source
+        if (utmCampaign && CAMPAIGN_INTENTS[utmCampaign]) {
+            campaignIntent = CAMPAIGN_INTENTS[utmCampaign];
+        } else if (utmSource && UTM_INTENTS[utmSource]) {
+            campaignIntent = UTM_INTENTS[utmSource];
+        } else if (PATH_INTENTS[path]) {
+            campaignIntent = PATH_INTENTS[path];
+        }
+
+        if (campaignIntent) {
+            document.addEventListener('DOMContentLoaded', function() {
+                // Inject intent-matched sub-headline into modal step 1
+                const modalTitle = document.querySelector('#step-1 h3');
+                const modalSubtitle = document.querySelector('#step-1 p');
+                if (modalTitle) {
+                    // Add campaign badge
+                    modalTitle.insertAdjacentHTML('beforebegin',
+                        `<span class="inline-block text-xs font-bold uppercase tracking-widest text-background bg-secondary px-3 py-1 mb-3">${campaignIntent.badge}</span>`);
+                }
+                if (modalSubtitle) {
+                    modalSubtitle.textContent = campaignIntent.headline;
+                    modalSubtitle.className = 'text-sm text-secondary mb-6 leading-relaxed font-semibold';
+                }
+                // Auto-open modal after short delay
+                setTimeout(function() {
+                    openTriageModal();
+                }, 900);
+            });
+        }
+    })();
+    </script>
+
+    <script>
+        // FAQ Accordion
+        function toggleFaq(btn) {
+            const answer  = btn.nextElementSibling;
+            const chevron = btn.querySelector('.faq-chevron');
+            const isOpen  = answer.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('rotated'));
+            document.querySelectorAll('.faq-item button').forEach(b => b.setAttribute('aria-expanded','false'));
+            if (!isOpen) {
+                answer.classList.add('open');
+                chevron.classList.add('rotated');
+                btn.setAttribute('aria-expanded','true');
+            }
+        }
+    </script>
+
+    <script>
+        // Toggle mobile menu helper
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Triage Modal state manager
+        let currentStep = 1;
+
+        function openCalendarBooking() {
+            if (typeof window.logLegalEvent === 'function') {
+                window.logLegalEvent('click_agenda_booking', 'calendar_booking');
+            }
+            window.open('https://cal.com/abogadoslama', '_blank');
+        }
+
+        function openTriageModal() {
+            const modal = document.getElementById('triage-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.classList.add('opacity-100');
+                }, 10);
+                resetForm();
+            }
+        }
+
+        function closeTriageModal() {
+            const modal = document.getElementById('triage-modal');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function resetForm() {
+            currentStep = 1;
+            document.getElementById('triage-form').reset();
+            updateStepVisibility();
+        }
+
+        function updateStepVisibility() {
+            // Hide all steps
+            const steps = document.querySelectorAll('.triage-step');
+            steps.forEach(step => step.classList.add('hidden'));
+
+            // Show active step
+            document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+
+            // Update Progress Bar
+            const percentage = (currentStep / totalSteps) * 100;
+            document.getElementById('progress-indicator').style.width = `${percentage}%`;
+            document.getElementById('step-percentage').innerText = `${percentage}%`;
+
+            // Step Label details
+            const stepTitles = [
+                "Especialidad",
+                "Detalle del Requerimiento",
+                "Información de Contacto"
+            ];
+            document.getElementById('step-label').innerText = `Paso ${currentStep} de ${totalSteps}: ${stepTitles[currentStep-1]}`;
+
+            // Control Navigation Buttons
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            // Show navigation controls only if not in success state
+            document.getElementById('navigation-controls').classList.remove('hidden');
+
+            prevBtn.disabled = currentStep === 1;
+
+            if (currentStep === totalSteps) {
+                nextBtn.innerText = "Enviar Solicitud";
+                nextBtn.type = "submit";
+                nextBtn.onclick = null;
+            } else {
+                nextBtn.innerText = "Siguiente";
+                nextBtn.type = "button";
+                nextBtn.onclick = nextStep;
+            }
+        }
+
+        function nextStep() {
+            if (validateCurrentStep()) {
+                currentStep++;
+                updateStepVisibility();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStepVisibility();
+            }
+        }
+
+        function validateCurrentStep() {
+            if (currentStep === 1) {
+                const checked = document.querySelector('input[name="requerimiento"]:checked');
+                if (!checked) {
+                    alert("Por favor seleccione una especialidad para continuar.");
+                    return false;
+                }
+                return true;
+            }
+            if (currentStep === 2) {
+                const reqValue = document.querySelector('input[name="requerimiento"]:checked').value;
+                let checkedSub;
+                if(reqValue === "Litigios Civiles") {
+                    checkedSub = document.querySelector('#step-2-civiles input[name="subnodo"]:checked');
+                } else {
+                    checkedSub = document.querySelector('#step-2-penales input[name="subnodo"]:checked');
+                }
+                if (!checkedSub) {
+                    alert("Por favor seleccione el detalle de su requerimiento para continuar.");
+                    return false;
+                }
+                return true;
+            }
+            return true;
+        }
+
+        function validatePhone(phone) {
+            // Chilean mobile: strip spaces, dashes. Must be exactly 9 digits, starting with 9
+            const digits = phone.replace(/\D/g, '');
+            return digits.length === 9 && digits.startsWith('9');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('contacto-nombre');
+            const emailInput = document.getElementById('contacto-email');
+            const phoneInput = document.getElementById('contacto-fono');
+            const phoneError = document.getElementById('phone-error');
+
+            if (!validatePhone(phoneInput.value)) {
+                phoneError.classList.remove('hidden');
+                return;
+            } else {
+                phoneError.classList.add('hidden');
+            }
+
+            // ── Payload Assembly ──────────────────────────────────────────
+            const trackingCode = "AL-" + Math.floor(1000 + Math.random() * 9000) + "-2026";
+            
+            // Subnodo value handling based on track
+            const requerimiento = document.querySelector('input[name="requerimiento"]:checked').value;
+            let subnodo = "";
+            let selectedSubnodoEl;
+            if(requerimiento === "Litigios Civiles") {
+                selectedSubnodoEl = document.querySelector('#step-2-civiles input[name="subnodo"]:checked');
+            } else {
+                selectedSubnodoEl = document.querySelector('#step-2-penales input[name="subnodo"]:checked');
+            }
+            if(selectedSubnodoEl) subnodo = selectedSubnodoEl.value;
+
+            const payload = {
+                // Firestore schema (matches Cloud Function LeadPayload interface)
+                requirement_type: requerimiento,
+                sub_node: subnodo,
+                client_name: nameInput.value,
+                contact_phone: "+56 " + phoneInput.value.replace(/\s+/g, ''),
+                tracking_code: trackingCode,
+                source: 'web_triage_modal',
+                created_at: new Date().toISOString()
+            };
+
+            // ── Disable button & show loading state ───────────────────────
+            const submitBtn = document.getElementById('next-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Enviando...';
+
+            // ── LocalStorage fallback (always written first) ───────────────
+            const submissions = JSON.parse(localStorage.getItem('abogados_lama_leads') || '[]');
+            submissions.push(payload);
+            localStorage.setItem('abogados_lama_leads', JSON.stringify(submissions));
+
+            // ── Firestore write (primary) ──────────────────────────────────
+            async function submitToFirestore() {
+                if (!db) {
+                    console.warn('[Lama] Firestore no disponible — lead guardado solo en localStorage.');
+                    return;
+                }
+                try {
+                    // Write to both collections so Cloud Function triggers fire
+                    const firestorePayload = {
+                        ...payload,
+                        created_at: firebase.firestore.FieldValue.serverTimestamp()
+                    };
+                    // Primary collection (onNewLeadTrigger)
+                    const ref = await db.collection('leads').add(firestorePayload);
+                    // Secondary triage collection (onNewTriageLeadTrigger)
+                    await db.collection('triage_leads').add({ ...firestorePayload, leads_ref: ref.id });
+                    console.log('[Lama] Lead enviado a Firestore. ID:', ref.id);
+                } catch (err) {
+                    console.error('[Lama] Error al escribir en Firestore:', err);
+                    // Still show success — lead is in localStorage as backup
+                }
+            }
+
+            // Run Firestore write non-blocking, then show success immediately
+            submitToFirestore();
+
+            // ── UI Success Transition ─────────────────────────────────────
+            document.getElementById('success-code').innerText = trackingCode;
+
+            document.getElementById('step-3').classList.add('hidden');
+            document.getElementById('step-success').classList.remove('hidden');
+            document.getElementById('navigation-controls').classList.add('hidden');
+            submitBtn.disabled = false;
+        }
+
+        function updateStep2Options() {
+            const req = document.querySelector('input[name="requerimiento"]:checked');
+            if (!req) return;
+            const value = req.value;
+
+            // Track start_triage event
+            if (typeof window.logLegalEvent === 'function') {
+                window.logLegalEvent('start_triage', 'triage_wizard_interaction');
+            }
+            
+            // Hide both first and remove required
+            document.getElementById('step-2-civiles').classList.add('hidden');
+            document.getElementById('step-2-penales').classList.add('hidden');
+            
+            // Clear subnodo checks
+            document.querySelectorAll('input[name="subnodo"]').forEach(r => r.checked = false);
+            
+            // Show the appropriate group and add required to its radios
+            if (value === "Litigios Civiles") {
+                document.getElementById('step-2-civiles').classList.remove('hidden');
+            } else if (value === "Litigios Penales") {
+                document.getElementById('step-2-penales').classList.remove('hidden');
+            }
+        }
+
+        // We only have 3 steps now before the success screen
+        const totalSteps = 3;
+
+        function submitTriageWhatsApp() {
+            if (typeof window.logLegalEvent === 'function') {
+                window.logLegalEvent('whatsapp_conversion_click', 'lead_conversion');
+            }
+            const url = `https://wa.me/56944814363?text=Hola%20Rossy%2C%20acabo%20de%20completar%20el%20Triage%20de%20Urgencia%20en%20la%20web.%20Tengo%20un%20caso%20de%20Litigio%20para%20revisar%20inmediatamente.`;
+            window.open(url, '_blank');
+        }
+    </script>
+    
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/56944814363" 
+       target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+       aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+</body>
+</html>

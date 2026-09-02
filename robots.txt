@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /functions/
+Disallow: /.firebase/
+Disallow: /abogados_lama_flutter/
+
+# AI Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://abogadoslama.cl/sitemap.xml

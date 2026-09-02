@@ -1,0 +1,86 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ──────────────────────────────────────────────────────────────────────
+    // HELPER FUNCTIONS
+    // ──────────────────────────────────────────────────────────────────────
+
+    // Validates email format (basic RFC check)
+    function isValidEmail(email) {
+      return email is string
+        && email.size() > 5
+        && email.size() <= 254
+        && email.matches('.*@.*\\..*');
+    }
+
+    // Validates phone (digits, spaces, +, dashes only)
+    function isValidPhone(phone) {
+      return phone is string
+        && phone.size() >= 8
+        && phone.size() <= 20;
+    }
+
+    // Core lead payload validation — must match client-side schema exactly
+    function isValidLeadPayload(data) {
+      return data.keys().hasAll([
+          'requirement_type', 'urgency_state', 'case_description',
+          'client_name', 'client_email', 'contact_phone'
+        ])
+        // No extra / injected keys beyond the expected schema
+        && data.keys().hasOnly([
+          'requirement_type', 'urgency_state', 'case_description',
+          'client_name', 'client_email', 'contact_phone',
+          'created_at', 'utm_source', 'utm_campaign', 'page_path'
+        ])
+        // Type enforcement
+        && data.requirement_type is string
+        && data.urgency_state    is string
+        && data.case_description is string
+        && data.client_name      is string
+        && data.client_email     is string
+        && data.contact_phone    is string
+        // Enum enforcement — only exact accepted values
+        && data.requirement_type in ['Empresa', 'Persona Natural']
+        && data.urgency_state    in ['Preventivo', 'Urgencia Judicial']
+        // Field length caps — blocks oversized DDoS / injection payloads
+        && data.client_name.size()      >  1
+        && data.client_name.size()      <= 120
+        && data.client_email.size()     <= 254
+        && data.contact_phone.size()    <= 20
+        && data.case_description.size() <= 1000
+        // Semantic validation
+        && isValidEmail(data.client_email)
+        && isValidPhone(data.contact_phone);
+    }
+
+    // ──────────────────────────────────────────────────────────────────────
+    // LEADS collection
+    // Write-only from web client. Admin SDK reads via Cloud Functions only.
+    // ──────────────────────────────────────────────────────────────────────
+    match /leads/{leadId} {
+      // CREATE: strict schema + field-size validation
+      allow create: if isValidLeadPayload(request.resource.data);
+
+      // No client-side reads, updates, or deletes — ever.
+      // Cloud Functions read via Admin SDK (bypasses these rules).
+      allow read, update, delete: if false;
+    }
+
+    // ──────────────────────────────────────────────────────────────────────
+    // TRIAGE_LEADS collection — same rules as leads
+    // ──────────────────────────────────────────────────────────────────────
+    match /triage_leads/{leadId} {
+      allow create: if isValidLeadPayload(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    // ──────────────────────────────────────────────────────────────────────
+    // DENY ALL — explicit default-deny for every other path
+    // Any collection not listed above is completely locked.
+    // ──────────────────────────────────────────────────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
